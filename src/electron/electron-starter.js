@@ -16,13 +16,12 @@ function createWindow() {
     mainWindow = new BrowserWindow({width: 800, height: 600});
 
     const staticFilesURL =  url.format({
-        pathname: path.join(__dirname, '/../build/index.html'),
+        pathname: path.join(__dirname, '/../../build/index.html'),
         protocol: 'file:',
         slashes: true
     });
-    const {ELECTRON_URL} = process.env
-    const initialURL = ELECTRON_URL || staticFilesURL
-    console.log(initialURL)
+    const {PORT} = process.env
+    const initialURL = PORT? `http://localhost:${PORT}` : staticFilesURL
     mainWindow.loadURL(initialURL)
     
     mainWindow.on('closed', function () {
