@@ -46,3 +46,54 @@ textarea {
   min-height: 100px;
   resize: vertical;
 }
+
+.message-bubble {
+  display: flex;
+  flex-direction: column;
+  max-width: 70%;
+  margin: 8px;
+  border-radius: 15px;
+  background-color: #f0f0f0;
+  width: 400px;
+  min-height: 100px;
+}
+
+
+.message-right {
+  align-self: flex-end;
+  background-color: #dcf8c6;
+}
+
+.message-left {
+  align-self: flex-start;
+  background-color: #d6dddf;
+}
+
+.message-header {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 4px;
+  border-radius: 15px;
+  background-color: lightgreen;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+
+
+.username {
+  font-weight: bold;
+}
+
+.time {
+  font-size: 0.8em;
+  color: #383838;
+  margin-left: auto;
+
+}
+
+.message-content {
+  word-wrap: break-word;
+  padding-left: 5px;
+}

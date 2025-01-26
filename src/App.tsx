@@ -1,11 +1,11 @@
 import React from 'react';
 import './App.css';
-import {ChatInput} from './components/index.tsx'
+import {ChatFeed} from './components/index.tsx'
 
 function App() {
   return (
     <div>
-      <ChatInput></ChatInput>
+      <ChatFeed></ChatFeed>
     </div>
   );
 }
