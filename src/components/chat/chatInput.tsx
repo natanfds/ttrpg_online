@@ -7,7 +7,6 @@ export const ChatInput = () => {
   const [showEmojis, setShowEmojis] = useState(false);
 
   const onEmojiClick = (emoji:any) => {
-    console.log(msg)
     setMsg(msg + emoji.emoji);
   }
 
@@ -42,6 +41,9 @@ export const ChatInput = () => {
           placeholder="Digite sua mensagem..."
         
         ></textarea>
+      </div>
+
+      <div className='formGroup'>
         <div className="emoji-container">
             <button 
               type="button" 
