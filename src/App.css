@@ -101,7 +101,7 @@ textarea {
   padding-left: 5px;
 }
 
-.chat-container {
+#chat-container {
   width: 400px;
   height: 100%;
   margin-left: auto;

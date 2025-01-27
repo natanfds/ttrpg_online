@@ -3,12 +3,12 @@ import { Engine, Scene } from "@babylonjs/core";
 import React from "react";
 
 export const SceneComponent = ({ antialias, engineOptions, adaptToDeviceRatio, sceneOptions, onRender, onSceneReady, ...rest }) => {
-  const reactCanvas = useRef(null);
+  const reactCanvas = useRef<HTMLCanvasElement>(null);
 
-  // set up basic engine and scene
+
+
   useEffect(() => {
     const { current: canvas } = reactCanvas;
-
     if (!canvas) return;
 
     const engine = new Engine(canvas, antialias, engineOptions, adaptToDeviceRatio);
@@ -25,8 +25,13 @@ export const SceneComponent = ({ antialias, engineOptions, adaptToDeviceRatio, s
     });
 
     const resize = () => {
+      const element = document.getElementById('chat-warp');
+      canvas.width = window.innerWidth - Number(element?.offsetWidth) - 10;
+      canvas.height = window.innerHeight - Number(element?.offsetHeight) - 10;
       scene.getEngine().resize();
     };
+
+    resize()
 
     if (window) {
       window.addEventListener("resize", resize);

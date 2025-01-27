@@ -12,7 +12,7 @@ export const ChatFeed = () => {
     }
   ] 
 
-  return(<div>
+  return(<div id="chat-warp">
     {msgs.map((msg: ChatMessageType) => {
       return <MessageBubble
         persona={msg.persona}

@@ -4,7 +4,7 @@ import { ChatInput } from "./chatInput.tsx";
 
 export const ChatComponent = () => {
   return (
-    <div className="chat-container">
+    <div id="chat-container">
       <ChatFeed></ChatFeed>
       <ChatInput></ChatInput>
     </div>
