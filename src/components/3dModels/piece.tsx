@@ -9,7 +9,15 @@ export class Piece{
     scene: any
   ){
     this.mesh = MeshBuilder.CreateBox("box", { size: size}, scene);
-    const {x, y} = position;
+    let {x, y} = position;
+
+    const isOdd = ((size % 2) !== 0)
+
+    if(isOdd){
+      x -= 0.5;
+      y -= 0.5
+    }
+
     this.mesh.position.x = x;
     this.mesh.position.y = size/2;
     this.mesh.position.z = y;
