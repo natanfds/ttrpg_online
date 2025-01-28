@@ -6,7 +6,6 @@ import {StateType} from  '../types/state.type.tsx'
 const Contador = ({ titulo }) => {
   // Acessa o estado do Redux
   const counter = useSelector((state: StateType) => { 
-    console.log(state)
     return state.counter});
 
   // Dispacha ações
